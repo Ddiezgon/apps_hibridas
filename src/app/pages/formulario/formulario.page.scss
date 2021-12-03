@@ -1,0 +1,21 @@
+.texto {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+form {
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+    box-shadow: -5px 5px 5px #ADADAD;
+}
+
+.inputs {
+    margin: 10px 10px 10px 10px;
+}

@@ -1,0 +1,29 @@
+.sliderLogo {   
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: -20px;
+    left: 30%;
+    max-width: 400px;
+    z-index: 1000;
+    object-fit: fill;
+}
+
+.sliderImg {
+    width: 100%;
+    max-width: 770px;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.sliderButton {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    z-index: 1000;
+    width: 90px;
+    height: 60px;
+    :hover {
+        cursor: pointer;
+    }
+}

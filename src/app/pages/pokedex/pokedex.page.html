@@ -1,0 +1,25 @@
+<app-header titulo="POKEDEX"></app-header>
+
+
+<ion-content scrol="true">
+
+  <ion-list>
+    <div *ngFor="let pokemon of pokedex; let i=index;">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            #{{pokemon.numero}} {{pokemon.nombre}}
+          </ion-card-title>
+        </ion-card-header>
+        <a href="http://pokemondb.net/pokedex/{{pokemon.nombre2}}"><img src="https://img.pokemondb.net/sprites/silver/normal/{{pokemon.nombre2}}.png" alt="{{pokemon.nombre}}"></a>
+        <ion-card-content>
+          Tipo principal: {{pokemon.tipo1}}<br>
+          Tipo secundario: {{pokemon.tipo2}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-list>
+
+  <br><br><br>
+
+</ion-content>
