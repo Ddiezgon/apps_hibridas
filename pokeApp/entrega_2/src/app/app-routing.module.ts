@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'update/:numeroPokemon',
     loadChildren: () => import('./pages/update/update.module').then( m => m.UpdatePageModule)
   },
+  {
+    path: 'listado-pokemon-existentes',
+    loadChildren: () => import('./pages/listado-pokemon-existentes/listado-pokemon-existentes.module').then( m => m.ListadoPokemonExistentesPageModule)
+  },
+  {
+    path: 'ejemplo-scroll-infinito',
+    loadChildren: () => import('./pages/ejemplo-scroll-infinito/ejemplo-scroll-infinito.module').then( m => m.EjemploScrollInfinitoPageModule)
+  },
 ];
 
 @NgModule({

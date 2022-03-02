@@ -1,15 +1,10 @@
-<app-header titulo="POKEDEX"></app-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ejemplo_scroll_infinito</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-
-<ion-content scrol="true">
-
-  <div class="header">
-    <p>Éstos son los pokemon que has capturado<br>¿Falta alguno? ¡Prueba a actualizar la pokedex!</p>
-    <ion-button type="button" (click)="listPokedex()">Actualizar Pokedex</ion-button>
-  </div>
-  <br><br>
-  <img src="assets/oak.png">
-
+<ion-content>
   <ion-list>
     <div *ngFor="let pokemon of pokedex; let i=index;">
 
@@ -20,7 +15,7 @@
           <ion-label>
             <h2>#{{pokemon.numero}} {{pokemon.nombre}}</h2>
             <div class="sprite">
-              <img src="https://img.pokemondb.net/sprites/silver/normal/{{pokemon.nombre2}}.png" alt="{{pokemon.nombre}} no existe">
+              <img src="https://img.pokemondb.net/sprites/silver/normal/{{pokemon.nombre}}.png" alt="{{pokemon.nombre}} no existe">
             </div>
             <p>Tipo principal: {{pokemon.tipo1}}<br>Tipo secundario: {{pokemon.tipo2}}</p>
           </ion-label>
@@ -39,8 +34,11 @@
 
     </div>
   </ion-list>
-</ion-content>
 
-<ion-footer-bar class="footer" routerLink="/formulario">
-  <p>Hazte con todos!</p>
-</ion-footer-bar>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Buscando más pokemon...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

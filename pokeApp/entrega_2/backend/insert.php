@@ -5,12 +5,38 @@
     $data = json_decode($input, true);
     $response = array();
 
-    $nombre = $_POST["nombre"];
+    $nombre_pokemon = $_POST["nombre"];
     $nombre2 = $_POST["nombre2"];
     $numero = $_POST["numero"];
     $tipo1 = $_POST["tipo1"];
     $tipo2 = $_POST["tipo2"];
     $img = $_FILES["img"];
+
+    // $request_url = 'https://pokeapi.co/api/v2/pokemon/' . $nombre_pokemon;
+    // $curl = curl_init($request_url);
+    // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    // $response = curl_exec($curl);
+    // curl_close($curl);
+
+    $input = json_decode($response, true);
+
+    // if ($input['name'] == null) {
+
+    //     echo "El pokemon no existe\n";
+
+    // }
+    // else {
+
+    //     $pokemon = new stdClass();
+    //     $pokemon->name = $input['name'];
+    //     $pokemon->numero = $input['order'];
+    //     $pokemon->tipo1 = $input['types']['0']['type']['name'];
+    //     $pokemon->tipo2 = $input['types']['1']['type']['name'];
+    //     $pokemon->img = $input['sprites']['front_default'];
+
+    //     echo json_encode($pokemon);
+    // }
+
 
     $ruta_imagen = gestionarImagen($img, $nombre2, $numero);
 

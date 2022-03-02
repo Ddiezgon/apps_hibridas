@@ -14,8 +14,12 @@ export class ApiService {
     return this.http.post('http://localhost/M14_apps_hibridas/pokeApp/backend/insert.php', data);
   }
 
-  listPokemon() {
-    return this.http.get('http://localhost/M14_apps_hibridas/pokeApp/backend/read.php');
+  apiPokemons(data) {
+    return this.http.post('http://localhost/M14_apps_hibridas/pokeApp/backend/read_all_pokemon.php', data);
+  }
+
+  listPokedex() {
+    return this.http.get('http://localhost/M14_apps_hibridas/pokeApp/backend/read_pokedex.php');
   }
 
   deletePokemon(data) {

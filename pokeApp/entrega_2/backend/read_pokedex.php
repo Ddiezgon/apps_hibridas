@@ -18,6 +18,9 @@
         array_push($pokedex, $pokemon);
     }
 
+    // aquí tenemos que devolver el objeto con la información almacenada
+    // que obtuvimos de la Api
+
     if ($select) {
         $result = json_encode($pokedex);
     }
