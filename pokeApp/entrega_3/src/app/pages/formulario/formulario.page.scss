@@ -1,0 +1,42 @@
+.texto {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+ion-input {
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
+    box-shadow: -5px 5px 5px #ADADAD;
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+input {
+    margin-left: 5%;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+ion-button {
+    margin-bottom: 250px;
+}
+
+ion-footer-bar {
+    background-color: #0060AB;
+    // margin-bottom: 80px;
+    text-align: center;
+
+    p {
+        color: #F7C503;
+    }
+}

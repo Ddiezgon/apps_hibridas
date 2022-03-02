@@ -1,0 +1,44 @@
+<app-header titulo="HAZTE CON TODOS!"></app-header>
+
+<ion-content>
+  <div class="texto">
+    <h2>¿Has capturado un nuevo pokemon?</h2>
+    <p>Introduce sus datos en la pokedex</p>
+  </div>
+  <!-- <div class="formulario"> -->
+  <ion-content class="formulario">
+    <ion-item>
+      <ion-label for="nombre">Introduce el nombre del pokemon:</ion-label><br>
+    </ion-item>
+    <ion-input [(ngModel)]="nombre" type="text"></ion-input><br><br>
+
+    <ion-item>
+      <ion-label for="numero">Introduce su número:</ion-label><br>
+    </ion-item>
+    <ion-input [(ngModel)]="numero" type="text"></ion-input><br><br>
+
+    <ion-item>
+      <ion-label for="tipo1">Introduce su tipo principal:</ion-label><br>
+    </ion-item>
+    <ion-input [(ngModel)]="tipo1" type="text"></ion-input><br><br>
+
+    <ion-item>
+      <ion-label for="tipo2">Introduce su tipo secundario:</ion-label><br>
+    </ion-item>
+    <ion-input [(ngModel)]="tipo2" type="text"></ion-input><br><br>
+
+    <ion-item>
+      <ion-label for="img">Sube una imagen:</ion-label><br>
+    </ion-item>
+    <input [(ngModel)]="img" type="file" (change)="selectedFile($event)" /><br><br>
+
+    <br>
+    <div class="botones">
+      <ion-button type="button" (click)="addPokemon();" routerLink="/pokedex">Capturar Pokemon</ion-button>
+    </div>
+  </ion-content>
+</ion-content>
+
+<ion-footer-bar>
+  <p>El pokemon se registrará en la pokedex</p>
+</ion-footer-bar>

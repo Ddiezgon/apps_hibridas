@@ -1,0 +1,41 @@
+<app-header titulo="POKEMON CONOCIDOS"></app-header>
+
+<ion-content scrol="true">
+  <ion-list>
+    <div *ngFor="let pokemon of all_pokemon; let i=index;">
+
+      <ion-item-sliding>
+
+        <ion-item>
+          <ion-label>
+            <h2>#{{pokemon.numero}} {{pokemon.nombre}}</h2>
+            <div class="sprite">
+              <img src={{pokemon.img}} alt="{{pokemon.nombre}} no existe">
+            </div>
+            <p>Tipo principal: {{pokemon.tipo1}}<br>Tipo secundario: {{pokemon.tipo2}}</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option color="warning" (click)="addPokemon(i)">
+            <ion-icon slot="icon-only" name="scan-circle-outline"></ion-icon>
+            <p>capturar</p>
+          </ion-item-option>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+    </div>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Buscando más pokemon...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+<ion-footer-bar class="footer">
+  <p>Hazte con todos!</p>
+</ion-footer-bar>

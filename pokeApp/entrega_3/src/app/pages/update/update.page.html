@@ -1,0 +1,30 @@
+<app-header titulo="HAZTE CON TODOS!"></app-header>
+
+<ion-content>
+  <h2>¿Quieres modificar el pokemon número {{numeroPokemon}}?</h2>
+  <!-- <div class="formulario"> -->
+  <ion-content class="formulario">
+    <ion-item>
+      <ion-label for="nombre">Introduce el nuevo nombre del pokemon:</ion-label><br>
+    </ion-item>
+    <ion-input [(ngModel)]="nombre" type="text"></ion-input><br><br>
+    <ion-item>
+      <ion-label for="tipo1">Introduce su tipo principal:</ion-label><br>
+    </ion-item>
+    <ion-input [(ngModel)]="tipo1" type="text"></ion-input><br><br>
+    <ion-item>
+      <ion-label for="tipo2">Introduce su tipo secundario:</ion-label><br>
+    </ion-item>
+    <ion-input [(ngModel)]="tipo2" type="text"></ion-input><br><br>
+    <br>
+    <div class="botones">
+      <ion-button type="button" (click)="updatePokemon();">Modificar Pokemon</ion-button>
+      <ion-button type="button" routerLink="/pokedex">Pokedex</ion-button>
+    </div>
+    
+  </ion-content>
+</ion-content>
+
+<!-- <ion-footer-bar>
+  <p>No olvides actualizar tu pokedex para ver los cambios!</p>
+</ion-footer-bar> -->
